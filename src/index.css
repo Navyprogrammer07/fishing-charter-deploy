@@ -1,0 +1,170 @@
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #f0f6fa;
+  color: #0c2d48;
+  margin: 0;
+}
+
+/* Fixed logo styles */
+.fixed-logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  width: 80px; /* Adjust logo size as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fixed-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 51, 102, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+  background-color: #ff6600; /* Blaze orange */
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cc5200;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: hsl(180, 83%, 70%); /* teal */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.nav-button:hover {
+  color: pink;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: rgb(184, 85, 158);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+  color: #ff3399; /* blaze pink */
+}
+
+/* Footer styles */
+.footer {
+  background-color:  #a6d9d9;
+  color: #FF5CA2;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* Other page content styles can go here */
+.content {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+}
+
+/* Add your other styles below */
+.btn-primary {
+  background: #ff4500; /* Blaze orange */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 69, 0, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #e03e00; /* Darker orange */
+  box-shadow: 0 6px 15px rgba(224, 62, 0, 0.6);
+  outline: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ff4500;
+  padding: 0.6rem 1.3rem;
+  border: 2px solid #ff4500;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: #ff4500;
+  color: white;
+  outline: none;
+}
