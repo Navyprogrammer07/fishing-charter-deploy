@@ -62,6 +62,7 @@ export default function Trips() {
           <p style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "0.5rem" }}>
             Fishing Charter Rates: Oak Island, Southport, Holden Beach
           </p>
+          {/* Updated: March 2025 */}
 
           <ul
             style={{
