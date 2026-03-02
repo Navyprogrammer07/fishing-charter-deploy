@@ -59,46 +59,208 @@ export default function Trips() {
 
         {/* Pricing Section */}
         <section style={{ marginBottom: "2.5rem" }}>
-          <p style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "0.5rem" }}>
-            Fishing Charter Rates: Oak Island, Southport, Holden Beach
+          <h2 style={{ 
+            fontSize: "1.8rem", 
+            fontWeight: "700", 
+            marginBottom: "1rem",
+            textAlign: "center",
+            color: "#ff4500"
+          }}>
+            Fishing Charter Rates
+          </h2>
+          <p style={{ 
+            fontSize: "1rem", 
+            marginBottom: "2rem",
+            textAlign: "center",
+            opacity: 0.9
+          }}>
+            Oak Island, Southport, Holden Beach
           </p>
-          {/* Updated: March 2025 */}
 
-          <ul
-            style={{
-              listStyle: "none",
-              paddingLeft: 0,
-              fontSize: "1.1rem",
-              lineHeight: 1.8,
-              marginBottom: "1.5rem",
-            }}
-          >
-            <li style={{ marginBottom: "0.5rem" }}><strong>2-Hour Kids Trip:</strong> $300</li>
-            
-            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (4 people):</strong> $450</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (5 people):</strong> $500</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (6 people):</strong> $550</li>
-            
-            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (4 people):</strong> $550</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (5 people):</strong> $600</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (6 people):</strong> $650</li>
-            
-            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (4 people):</strong> $700</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (5 people):</strong> $750</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (6 people):</strong> $800</li>
-            
-            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (4 people):</strong> $750</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (5 people):</strong> $800</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (6 people):</strong> $850</li>
-            
-            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 4 people):</strong> $1000</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 5 people):</strong> $1050</li>
-            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 6 people):</strong> $1150</li>
-            
-            <li style={{ marginTop: "0.5rem" }}><strong>Extended Trip:</strong> Inquire with us</li>
-          </ul>
+          {/* Pricing Cards Grid */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "1.2rem",
+            marginBottom: "2rem"
+          }}>
+            {/* 2-Hour Kids Trip */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)",
+              textAlign: "center"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.5rem" }}>
+                2-Hour Kids Trip
+              </div>
+              <div style={{ fontSize: "1.8rem", fontWeight: "700", color: "#ff4500" }}>
+                $300
+              </div>
+            </div>
 
-          <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>
+            {/* 3-Hour Trips */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.8rem", textAlign: "center" }}>
+                3-Hour Trip
+              </div>
+              <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$450</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$500</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$550</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* 4-Hour Trips */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.8rem", textAlign: "center" }}>
+                4-Hour Trip
+              </div>
+              <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$550</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$600</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$650</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* 5-Hour Trips */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.8rem", textAlign: "center" }}>
+                5-Hour Trip
+              </div>
+              <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$700</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$750</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$800</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* 6-Hour Trips */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.8rem", textAlign: "center" }}>
+                6-Hour Trip
+              </div>
+              <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$750</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$800</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$850</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* Full Day Trip */}
+            <div style={{
+              backgroundColor: "rgba(255, 69, 0, 0.15)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.5)",
+              gridColumn: "1 / -1"
+            }}>
+              <div style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "0.8rem", textAlign: "center", color: "#ff4500" }}>
+                Full Day Trip (8 hours)
+              </div>
+              <div style={{ 
+                display: "grid", 
+                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                gap: "0.8rem",
+                fontSize: "0.95rem"
+              }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1000</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1050</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1150</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* Extended Trip */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)",
+              textAlign: "center",
+              gridColumn: "1 / -1"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.5rem" }}>
+                Extended Trip
+              </div>
+              <div style={{ fontSize: "1rem", color: "#ff4500", fontWeight: "600" }}>
+                Inquire with us
+              </div>
+            </div>
+          </div>
+
+          <p style={{ 
+            fontSize: "1rem", 
+            marginBottom: "1.5rem",
+            textAlign: "center",
+            lineHeight: 1.6,
+            padding: "0 1rem"
+          }}>
             We seek out live fresh bait daily and will pick you up at a predetermined location.
             Interested in helping with bait or watching? Let us know when making arrangements.
           </p>
@@ -168,11 +330,17 @@ export default function Trips() {
           h1 {
             font-size: 2rem !important;
           }
+          h2 {
+            font-size: 1.5rem !important;
+          }
           ul {
             font-size: 1rem !important;
           }
           section p {
             font-size: 1rem !important;
+          }
+          .pricing-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
