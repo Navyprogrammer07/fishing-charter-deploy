@@ -68,33 +68,33 @@ export default function Trips() {
               listStyle: "none",
               paddingLeft: 0,
               fontSize: "1.1rem",
-              lineHeight: 1.7,
+              lineHeight: 1.8,
               marginBottom: "1.5rem",
             }}
           >
-            <li><strong>2-Hour Kids Trip:</strong> $300</li>
-            ------------------------------------------------
-            <li><strong>3-Hour Trip(4 people):</strong> $450</li>
-            <li><strong>3-Hour Trip(5 people):</strong> $500</li>
-            <li><strong>3-Hour Trip(6 people):</strong> $550</li>
-             -----------------------------------------------------
-            <li><strong>4-Hour Trip(4 people):</strong> $550</li>
-            <li><strong>4-Hour Trip(5 people):</strong> $600</li>
-            <li><strong>4-Hour Trip(6 people):</strong> $650</li>
-            --------------------------------------------------------
-            <li><strong>5-Hour Trip(4 people):</strong> $700</li>
-            <li><strong>5-Hour Trip(5 people):</strong> $750</li>
-            <li><strong>5-Hour Trip(6 people):</strong> $800</li>
-            -------------------------------------------------------
-            <li><strong>6-Hour Trip(4 people):</strong> $750</li>
-            <li><strong>6-Hour Trip(5 people):</strong> $800</li>
-            <li><strong>6-Hour Trip(6 people):</strong> $850</li>
-            -------------------------------------------------------
-            <li><strong>Full Day Trip (8 hours-4 people):</strong> $1000</li>
-            <li><strong>Full Day Trip (8 hours-5 people):</strong> $1050</li>
-            <li><strong>Full Day Trip (8 hours-6-people):</strong> $1150</li>
-            ----------------------------------------------------------------
-            <li><strong>Extended Trip:</strong> Inquire with us</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>2-Hour Kids Trip:</strong> $300</li>
+            
+            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (4 people):</strong> $450</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (5 people):</strong> $500</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>3-Hour Trip (6 people):</strong> $550</li>
+            
+            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (4 people):</strong> $550</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (5 people):</strong> $600</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>4-Hour Trip (6 people):</strong> $650</li>
+            
+            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (4 people):</strong> $700</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (5 people):</strong> $750</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>5-Hour Trip (6 people):</strong> $800</li>
+            
+            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (4 people):</strong> $750</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (5 people):</strong> $800</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>6-Hour Trip (6 people):</strong> $850</li>
+            
+            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 4 people):</strong> $1000</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 5 people):</strong> $1050</li>
+            <li style={{ marginBottom: "0.5rem" }}><strong>Full Day Trip (8 hours - 6 people):</strong> $1150</li>
+            
+            <li style={{ marginTop: "0.5rem" }}><strong>Extended Trip:</strong> Inquire with us</li>
           </ul>
 
           <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>
