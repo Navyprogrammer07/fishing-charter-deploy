@@ -60,7 +60,7 @@ export default function About() {
             Captain Josh Richardson
           </h2>
           <p style={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
-            With over 14 years of experience navigating the waters of Holden Beach, Oak Island, and Southport, Captain Josh is a true backwater expert. Born and raised fishing the North Carolina coast, he has spent years mastering the waters of both intercoastal and inshore. More than just a skilled angler, Josh is a patient and enthusiastic guide who loves sharing the excitement of fishing with others. Whether you're a seasoned pro or introducing your kids to their first fishing adventure, Captain Josh’s deep local knowledge and passion for the water ensure a fun, safe, and unforgettable experience.
+            With over 15 years of experience navigating the waters of Holden Beach, Oak Island, and Southport, Captain Josh is a true backwater expert. Born and raised fishing the North Carolina coast, he has spent years mastering the waters of both intercoastal and inshore. More than just a skilled angler, Josh is a patient and enthusiastic guide who loves sharing the excitement of fishing with others. Whether you're a seasoned pro or introducing your kids to their first fishing adventure, Captain Josh’s deep local knowledge and passion for the water ensure a fun, safe, and unforgettable experience.
           </p>
         </div>
       </div>
