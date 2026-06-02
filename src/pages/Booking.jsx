@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function Booking() {
   return (
@@ -25,31 +25,31 @@ export default function Booking() {
           padding: "2rem 1rem",
           width: "100%",
           maxWidth: "900px",
-          boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
         }}
       >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-            marginBottom: "1rem",
-          }}
-        >
+        {/* TITLE */}
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
           Book Your Trip
         </h1>
 
+        {/* PHONE */}
         <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
           Please call us at{" "}
-          <a href="tel:+13217040973" style={{ color: "white", textDecoration: "underline" }}>
+          <a
+            href="tel:+13217040973"
+            style={{ color: "white", textDecoration: "underline" }}
+          >
             (321) 704-0973
           </a>{" "}
           to book your fishing charter.
         </p>
 
-        <p style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>
+        {/* BOOKING BUTTON */}
+        <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
           Or book your trip online with our trusted partner:
         </p>
 
@@ -66,16 +66,38 @@ export default function Booking() {
             fontSize: "1.1rem",
             textDecoration: "none",
             boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-            transition: "background-color 0.3s ease",
             marginBottom: "2rem",
-            cursor: "pointer",
           }}
-          onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#d0471d")}
-          onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#e25822")}
         >
           Book Now on Fishing Booker
         </a>
 
+        {/* 🌊 WINDY WEATHER (NEW SECTION - IMPORTANT) */}
+        <h2 style={{ marginBottom: "1rem", fontSize: "1.6rem" }}>
+          Current Fishing Conditions
+        </h2>
+
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "850px",
+            borderRadius: "14px",
+            overflow: "hidden",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.4)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            marginBottom: "2.5rem",
+          }}
+        >
+          <iframe
+            title="Windy Weather Map"
+            width="100%"
+            height="450"
+            src="https://embed.windy.com/embed2.html?lat=33.916&lon=-78.179&zoom=8&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.916&detailLon=-78.179&metricWind=mph&metricTemp=%C2%B0F"
+            frameBorder="0"
+          />
+        </div>
+
+        {/* AVAILABILITY */}
         <p style={{ marginBottom: "1rem", fontWeight: "600", fontSize: "1.1rem" }}>
           Check availability below:
         </p>
@@ -103,7 +125,7 @@ export default function Booking() {
         </div>
       </div>
 
-      {/* Mobile adjustments */}
+      {/* MOBILE FIXES */}
       <style>{`
         @media (max-width: 600px) {
           h1 {
