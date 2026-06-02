@@ -27,7 +27,7 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        © 2025 Hook Ya Up Fishing Charter. All rights reserved.
+        © 2026 Hook Ya Up Fishing Charter. All rights reserved.
       </footer>
     </>
   );
