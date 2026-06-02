@@ -1,29 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
 export default function Booking() {
-  const weatherRef = useRef(null);
-  const recoRef = useRef(null);
-
   useEffect(() => {
-    // CLEAN OLD WIDGETS (prevents duplicate issues on navigation)
-    weatherRef.current.innerHTML = "";
-    recoRef.current.innerHTML = "";
+    // Prevent double-loading
+    if (window.__fbkrLoaded) return;
+    window.__fbkrLoaded = true;
 
-    // WEATHER SCRIPT
+    // WEATHER
     const weatherScript = document.createElement("script");
     weatherScript.src =
       "https://fishingbooker.com/widget/get?charterId=43622&widget=weather&unique=926&shadow=true&size=small&units=imperial";
     weatherScript.async = true;
+    document.body.appendChild(weatherScript);
 
-    weatherRef.current.appendChild(weatherScript);
-
-    // RECOMMENDATION SCRIPT
+    // RECOMMENDATION
     const recoScript = document.createElement("script");
     recoScript.src =
       "https://fishingbooker.com/widget/get?charterId=43622&widget=recommendation&unique=764&shadow=true";
     recoScript.async = true;
-
-    recoRef.current.appendChild(recoScript);
+    document.body.appendChild(recoScript);
   }, []);
 
   return (
@@ -44,7 +39,7 @@ export default function Booking() {
           Book Your Trip
         </h1>
 
-        <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+        <p style={{ textAlign: "center" }}>
           Call{" "}
           <a
             href="tel:+13217040973"
@@ -52,36 +47,34 @@ export default function Booking() {
           >
             (321) 704-0973
           </a>
+        </p>
+
+        {/* WEATHER */}
+        <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
+          Fishing Conditions
+        </h2>
+
+        <div
+          id="fbkr-widget-926"
+          style={{
+            background: "#fff",
+            borderRadius: "10px",
+            padding: "15px",
+            marginBottom: "2rem",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          }}
+        >
+          <a href="https://fishingbooker.com">
+            <img
+              src="https://static.fishingbooker.com/public/img/widgets/fishingbooker-logo-dark.svg"
+              alt="FishingBooker"
+            />
+          </a>
         </div>
-
-        {/* WEATHER WIDGET */}
-        <h2 style={{ textAlign: "center" }}>Fishing Conditions</h2>
-        <div
-          ref={weatherRef}
-          style={{
-            background: "#fff",
-            borderRadius: "10px",
-            padding: "15px",
-            marginBottom: "2rem",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-          }}
-        />
-
-        {/* RECOMMENDATION WIDGET */}
-        <h2 style={{ textAlign: "center" }}>What Anglers Are Saying</h2>
-        <div
-          ref={recoRef}
-          style={{
-            background: "#fff",
-            borderRadius: "10px",
-            padding: "15px",
-            marginBottom: "2rem",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-          }}
-        />
 
         {/* CALENDAR */}
         <h2 style={{ textAlign: "center" }}>Check Availability</h2>
+
         <iframe
           title="Booking Calendar"
           src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York"
@@ -92,6 +85,29 @@ export default function Booking() {
             borderRadius: "10px",
           }}
         />
+
+        {/* RECOMMENDATIONS */}
+        <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
+          What Anglers Are Saying
+        </h2>
+
+        <div
+          id="fbkr-widget-764"
+          style={{
+            background: "#fff",
+            borderRadius: "10px",
+            padding: "15px",
+            marginBottom: "2rem",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          }}
+        >
+          <a href="https://fishingbooker.com">
+            <img
+              src="https://static.fishingbooker.com/public/img/widgets/fishingbooker-logo-dark.svg"
+              alt="FishingBooker"
+            />
+          </a>
+        </div>
       </div>
     </main>
   );
