@@ -204,6 +204,32 @@ export default function Trips() {
               </div>
             </div>
 
+             {/* Shark Fishing */}
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "8px",
+              padding: "1.2rem",
+              border: "2px solid rgba(255, 69, 0, 0.3)"
+            }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.8rem", textAlign: "center" }}>
+                Shark Fishing
+              </div>
+              <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>4 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$750</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
+                  <span>5 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$800</strong>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span>6 people:</span>
+                  <strong style={{ color: "#ff4500" }}>$850</strong>
+                </div>
+              </div>
+            </div>
+
             {/* Full Day Trip */}
             <div style={{
               backgroundColor: "rgba(255, 69, 0, 0.15)",
@@ -292,7 +318,7 @@ export default function Trips() {
                 maxWidth: 500,
               }}
             >
-              <li><strong>19 Ft Center Console Wellcraft Fishing Charter</strong></li>
+              <li><strong>21 Ft Contender Fishing Charter</strong></li>
               <li><strong>Fishing license</strong></li>
               <li><strong>Rods and reels (or bring your own)</strong></li>
               <li><strong>Tackle, bait, and ice</strong></li>
