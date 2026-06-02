@@ -1,17 +1,34 @@
-import React from "react";
-import FishingBookerWidget from "../components/FishingBookerWidget";
+import React, { useEffect } from "react";
 
 export default function Booking() {
+  useEffect(() => {
+    const recommendationScript = document.createElement("script");
+    recommendationScript.src =
+      "https://fishingbooker.com/widget/get?charterId=43622&widget=recommendation&unique=764&shadow=true";
+    recommendationScript.async = true;
+    recommendationScript.defer = true;
+
+    document.body.appendChild(recommendationScript);
+
+    return () => {
+      document.body.removeChild(recommendationScript);
+    };
+  }, []);
+
   return (
     <main
       style={{
         margin: 0,
         padding: 0,
         background: "linear-gradient(135deg, #00b3b3, #3eb3ae)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         minHeight: "100vh",
         width: "100%",
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
         color: "#FF5CA2",
         textShadow: "1px 1px 4px rgba(0,0,0,0.7)",
         boxSizing: "border-box",
@@ -19,33 +36,42 @@ export default function Booking() {
     >
       <div
         style={{
+          padding: "2rem 1rem",
           width: "100%",
           maxWidth: "900px",
-          padding: "2rem 1rem",
+          boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
         }}
       >
-        {/* TITLE */}
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
+        <h1
+          style={{
+            fontSize: "2.5rem",
+            marginBottom: "1rem",
+          }}
+        >
           Book Your Trip
         </h1>
 
         <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-          Call us at{" "}
+          Please call us at{" "}
           <a
             href="tel:+13217040973"
             style={{ color: "white", textDecoration: "underline" }}
           >
             (321) 704-0973
-          </a>
+          </a>{" "}
+          to book your fishing charter.
         </p>
 
-        {/* BOOKING BUTTON */}
+        <p style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>
+          Or book your trip online with our trusted partner:
+        </p>
+
         <a
-          href="https://fishingbooker.com/charters/view/43622?booking_date=07-31-2025&date_search=07-31-2025&booking_persons=2"
+          href="https://fishingbooker.com/charters/view/43622?booking_date=07-31-2025&date_search=07-31-2025&booking_persons=2&booking_days=1&booking_children=0"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -54,71 +80,102 @@ export default function Booking() {
             padding: "1rem 2rem",
             borderRadius: "8px",
             fontWeight: "bold",
+            fontSize: "1.1rem",
             textDecoration: "none",
-            marginBottom: "2.5rem",
             boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+            transition: "background-color 0.3s ease",
+            marginBottom: "2rem",
+            cursor: "pointer",
           }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "#d0471d")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "#e25822")
+          }
         >
           Book Now on Fishing Booker
         </a>
 
-        {/* WEATHER */}
-        <div style={{ width: "100%", maxWidth: "800px", marginBottom: "2.5rem" }}>
-          <h2 style={{ marginBottom: "1rem" }}>Fishing Conditions</h2>
+        {/* FishingBooker Recommendation Widget */}
+        <h2
+          style={{
+            color: "white",
+            marginBottom: "1rem",
+            marginTop: "1rem",
+          }}
+        >
+          Recommended by FishingBooker
+        </h2>
 
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "10px",
-              padding: "15px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-            }}
-          >
-            <FishingBookerWidget
-              id="fbkr-widget-926"
-              src="https://fishingbooker.com/widget/get?charterId=43622&widget=weather&unique=926&shadow=true&size=small&units=imperial"
-            />
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "800px",
+            background: "#fff",
+            borderRadius: "10px",
+            padding: "15px",
+            marginBottom: "2rem",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          }}
+        >
+          <div id="fbkr-widget-764">
+            <a href="https://fishingbooker.com">
+              <img
+                src="https://static.fishingbooker.com/public/img/widgets/fishingbooker-logo-dark.svg"
+                alt="FishingBooker"
+              />
+            </a>
           </div>
         </div>
 
-        {/* CALENDAR */}
-        <div style={{ width: "100%", maxWidth: "800px", marginBottom: "2.5rem" }}>
-          <h2 style={{ marginBottom: "1rem" }}>Check Availability</h2>
+        <p
+          style={{
+            marginBottom: "1rem",
+            fontWeight: "600",
+            fontSize: "1.1rem",
+          }}
+        >
+          Check availability below:
+        </p>
 
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "800px",
+            overflow: "hidden",
+            borderRadius: "10px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+          }}
+        >
           <iframe
             title="Booking Calendar"
             src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York"
             style={{
+              border: 0,
               width: "100%",
               height: "600px",
-              border: 0,
-              borderRadius: "10px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
             }}
-          />
-        </div>
-
-        {/* RECOMMENDATIONS */}
-        <div style={{ width: "100%", maxWidth: "800px", marginBottom: "2rem" }}>
-          <h2 style={{ marginBottom: "1rem" }}>
-            What Anglers Are Saying
-          </h2>
-
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "10px",
-              padding: "15px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-            }}
-          >
-            <FishingBookerWidget
-              id="fbkr-widget-764"
-              src="https://fishingbooker.com/widget/get?charterId=43622&widget=recommendation&unique=764&shadow=true"
-            />
-          </div>
+            frameBorder="0"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 600px) {
+          h1 {
+            font-size: 2rem !important;
+          }
+          a {
+            font-size: 1rem !important;
+            padding: 0.8rem 1.5rem !important;
+          }
+          iframe {
+            height: 400px !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }
