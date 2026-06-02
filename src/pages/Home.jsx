@@ -92,7 +92,7 @@ export default function Home() {
             Hook Ya Up Fishing Charters
           </h1>
           <p style={{ fontSize: "1.3rem", lineHeight: 1.6 }}>
-            Explore the waters of Holden Beach, Oak Island, and Southport with Captain Josh — a trusted local guide with 14 years of experience and deep roots in the fishing community.
+            Explore the waters of Holden Beach, Oak Island, and Southport with Captain Josh — a trusted local guide with 15 years of experience and deep roots in the fishing community.
           </p>
 
           {/* CTA Buttons */}
