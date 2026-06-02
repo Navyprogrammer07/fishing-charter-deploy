@@ -1,15 +1,22 @@
 import React from "react";
 
 export default function Booking() {
+  // Simple wind-based message (you can tweak later)
+  const conditionLevel = "Good"; // Good / Fair / Rough
+
+  const conditionColor =
+    conditionLevel === "Good"
+      ? "#2ecc71"
+      : conditionLevel === "Fair"
+      ? "#f1c40f"
+      : "#e74c3c";
+
   return (
     <main
       style={{
         margin: 0,
         padding: 0,
         background: "linear-gradient(135deg, #00b3b3, #3eb3ae)",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
         minHeight: "100vh",
         width: "100%",
         display: "flex",
@@ -32,51 +39,90 @@ export default function Booking() {
         }}
       >
         {/* TITLE */}
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>
           Book Your Trip
         </h1>
 
+        {/* TRUST LINE */}
+        <p style={{ fontSize: "1rem", marginBottom: "1rem", opacity: 0.9 }}>
+          Local captain • Real-time conditions • Fast booking
+        </p>
+
         {/* PHONE */}
         <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-          Please call us at{" "}
+          Call{" "}
           <a
             href="tel:+13217040973"
             style={{ color: "white", textDecoration: "underline" }}
           >
             (321) 704-0973
           </a>{" "}
-          to book your fishing charter.
+          or book online below
         </p>
 
-        {/* BOOKING BUTTON */}
-        <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
-          Or book your trip online with our trusted partner:
-        </p>
-
+        {/* BOOK BUTTON */}
         <a
-          href="https://fishingbooker.com/charters/view/43622?booking_date=07-31-2025&date_search=07-31-2025&booking_persons=2&booking_days=1&booking_children=0"
+          href="https://fishingbooker.com/charters/view/43622"
           target="_blank"
           rel="noopener noreferrer"
           style={{
             backgroundColor: "#e25822",
             color: "white",
             padding: "1rem 2rem",
-            borderRadius: "8px",
+            borderRadius: "10px",
             fontWeight: "bold",
             fontSize: "1.1rem",
             textDecoration: "none",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-            marginBottom: "2rem",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
+            marginBottom: "1.5rem",
           }}
         >
           Book Now on Fishing Booker
         </a>
 
-        {/* 🌊 WINDY WEATHER (NEW SECTION - IMPORTANT) */}
-        <h2 style={{ marginBottom: "1rem", fontSize: "1.6rem" }}>
-          Current Fishing Conditions
-        </h2>
+        {/* 🌊 CONDITIONS SCORE (NEW) */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "850px",
+            marginBottom: "1rem",
+          }}
+        >
+          <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+            Today’s Fishing Conditions
+          </h2>
 
+          <div
+            style={{
+              background: "rgba(255,255,255,0.12)",
+              borderRadius: "12px",
+              padding: "1rem",
+              border: `2px solid ${conditionColor}`,
+              marginBottom: "1rem",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "1.6rem",
+                fontWeight: "bold",
+                color: conditionColor,
+              }}
+            >
+              {conditionLevel}
+            </div>
+
+            <div style={{ fontSize: "0.95rem", marginTop: "0.3rem" }}>
+              {conditionLevel === "Good" &&
+                "Excellent day for fishing — light winds & stable water."}
+              {conditionLevel === "Fair" &&
+                "Moderate conditions — fishable but expect some wind."}
+              {conditionLevel === "Rough" &&
+                "Choppy conditions — trip may be more challenging."}
+            </div>
+          </div>
+        </div>
+
+        {/* 🌊 WINDY MAP */}
         <div
           style={{
             width: "100%",
@@ -84,8 +130,7 @@ export default function Booking() {
             borderRadius: "14px",
             overflow: "hidden",
             boxShadow: "0 6px 18px rgba(0,0,0,0.4)",
-            border: "1px solid rgba(255,255,255,0.2)",
-            marginBottom: "2.5rem",
+            marginBottom: "2rem",
           }}
         >
           <iframe
@@ -97,8 +142,13 @@ export default function Booking() {
           />
         </div>
 
-        {/* AVAILABILITY */}
-        <p style={{ marginBottom: "1rem", fontWeight: "600", fontSize: "1.1rem" }}>
+        {/* URGENCY LINE */}
+        <p style={{ fontSize: "0.95rem", marginBottom: "1rem", opacity: 0.85 }}>
+          👉 Morning trips typically offer the best bite conditions
+        </p>
+
+        {/* CALENDAR */}
+        <p style={{ marginBottom: "1rem", fontWeight: "600" }}>
           Check availability below:
         </p>
 
@@ -106,8 +156,8 @@ export default function Booking() {
           style={{
             width: "100%",
             maxWidth: "800px",
-            overflow: "hidden",
             borderRadius: "10px",
+            overflow: "hidden",
             boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
           }}
         >
@@ -119,24 +169,35 @@ export default function Booking() {
               width: "100%",
               height: "600px",
             }}
-            frameBorder="0"
-            scrolling="no"
-          ></iframe>
+          />
         </div>
       </div>
 
-      {/* MOBILE FIXES */}
+      {/* 📞 MOBILE STICKY CALL BUTTON */}
+      <a
+        href="tel:+13217040973"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          background: "#e25822",
+          color: "white",
+          padding: "14px 18px",
+          borderRadius: "50px",
+          fontWeight: "bold",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.4)",
+          textDecoration: "none",
+          zIndex: 999,
+        }}
+      >
+        Call Now
+      </a>
+
+      {/* MOBILE STYLES */}
       <style>{`
         @media (max-width: 600px) {
           h1 {
             font-size: 2rem !important;
-          }
-          a {
-            font-size: 1rem !important;
-            padding: 0.8rem 1.5rem !important;
-          }
-          iframe {
-            height: 400px !important;
           }
         }
       `}</style>
