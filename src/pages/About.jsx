@@ -12,7 +12,7 @@
     Our Vessel
   </h2>
 
-  {/* PRIMARY BOAT IMAGE (BEST ONE) */}
+  {/* PRIMARY BOAT IMAGE  */}
   <img
     src="/images/contender-21ft.jpg"
     alt="21 ft Contender fishing boat"
