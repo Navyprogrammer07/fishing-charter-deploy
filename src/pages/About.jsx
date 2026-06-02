@@ -56,17 +56,5 @@
         objectFit: "cover",
       }}
     />
-
-    <img
-      src="/images/boat-3.jpg"
-      alt="Contender fishing view"
-      style={{
-        width: "100%",
-        maxWidth: "300px",
-        borderRadius: "12px",
-        boxShadow: "0 6px 18px rgba(0,0,0,0.5)",
-        objectFit: "cover",
-      }}
-    />
   </div>
 </div>
