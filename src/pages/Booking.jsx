@@ -1,20 +1,6 @@
 import React, { useEffect } from "react";
 
 export default function Booking() {
-  useEffect(() => {
-    const recommendationScript = document.createElement("script");
-    recommendationScript.src =
-      "https://fishingbooker.com/widget/get?charterId=43622&widget=recommendation&unique=764&shadow=true";
-    recommendationScript.async = true;
-    recommendationScript.defer = true;
-
-    document.body.appendChild(recommendationScript);
-
-    return () => {
-      document.body.removeChild(recommendationScript);
-    };
-  }, []);
-
   return (
     <main
       style={{
@@ -57,10 +43,7 @@ export default function Booking() {
 
         <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
           Please call us at{" "}
-          <a
-            href="tel:+13217040973"
-            style={{ color: "white", textDecoration: "underline" }}
-          >
+          <a href="tel:+13217040973" style={{ color: "white", textDecoration: "underline" }}>
             (321) 704-0973
           </a>{" "}
           to book your fishing charter.
@@ -87,55 +70,13 @@ export default function Booking() {
             marginBottom: "2rem",
             cursor: "pointer",
           }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = "#d0471d")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = "#e25822")
-          }
+          onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#d0471d")}
+          onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#e25822")}
         >
           Book Now on Fishing Booker
         </a>
 
-        {/* FishingBooker Recommendation Widget */}
-        <h2
-          style={{
-            color: "white",
-            marginBottom: "1rem",
-            marginTop: "1rem",
-          }}
-        >
-          Recommended by FishingBooker
-        </h2>
-
-        <div
-          style={{
-            width: "100%",
-            maxWidth: "800px",
-            background: "#fff",
-            borderRadius: "10px",
-            padding: "15px",
-            marginBottom: "2rem",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-          }}
-        >
-          <div id="fbkr-widget-764">
-            <a href="https://fishingbooker.com">
-              <img
-                src="https://static.fishingbooker.com/public/img/widgets/fishingbooker-logo-dark.svg"
-                alt="FishingBooker"
-              />
-            </a>
-          </div>
-        </div>
-
-        <p
-          style={{
-            marginBottom: "1rem",
-            fontWeight: "600",
-            fontSize: "1.1rem",
-          }}
-        >
+        <p style={{ marginBottom: "1rem", fontWeight: "600", fontSize: "1.1rem" }}>
           Check availability below:
         </p>
 
@@ -162,6 +103,7 @@ export default function Booking() {
         </div>
       </div>
 
+      {/* Mobile adjustments */}
       <style>{`
         @media (max-width: 600px) {
           h1 {
