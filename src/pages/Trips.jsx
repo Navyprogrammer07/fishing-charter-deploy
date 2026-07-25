@@ -217,15 +217,15 @@ export default function Trips() {
               <div style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
                   <span>4 people:</span>
-                  <strong style={{ color: "#ff4500" }}>$750</strong>
+                  <strong style={{ color: "#ff4500" }}>$850</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
                   <span>5 people:</span>
-                  <strong style={{ color: "#ff4500" }}>$800</strong>
+                  <strong style={{ color: "#ff4500" }}>$900</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>6 people:</span>
-                  <strong style={{ color: "#ff4500" }}>$850</strong>
+                  <strong style={{ color: "#ff4500" }}>$950</strong>
                 </div>
               </div>
             </div>
@@ -249,15 +249,15 @@ export default function Trips() {
               }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>4 people:</span>
-                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1000</strong>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1300</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>5 people:</span>
-                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1050</strong>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1350</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span>6 people:</span>
-                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1150</strong>
+                  <strong style={{ color: "#ff4500", fontSize: "1.1rem" }}>$1400</strong>
                 </div>
               </div>
             </div>
